@@ -6,10 +6,10 @@ Some content and documentation might change later on.
 
 #### Index
 
-* [API levels explained](#api-levels-explained-index)
-* [GetItem](#getitem-index)
-* [GetAllItems](#getallitems-index)
-* [GetCurrencyRates](#getcurrencyrates-index)
+* [API levels explained](#api-levels-explained-)
+* [GetItem](#getitem-)
+* [GetAllItems](#getallitems-)
+* [GetCurrencyRates](#getcurrencyrates-)
 
 ---
 
