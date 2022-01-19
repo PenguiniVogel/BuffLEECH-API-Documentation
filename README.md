@@ -73,7 +73,7 @@ so in our mentioned example we would receive this response:
 }
 ```
 
-The closer you specify the name, the more likely you will receive the result you are looking for e.g.:
+The closer you specify the name, the more likely you will receive the result you are looking for e.g.: <br>
 `GetItem?name=Souvenir AWP | Dragon Lore (Field-Tested)`
 ```JSON
 {
