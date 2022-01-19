@@ -4,16 +4,16 @@
 
 Some content and documentation might change later on.
 
-##### Index
+#### Index
 
-* [API levels explained](#API-levels-explained)
-* GetItem
-* GetAllItems
-* GetCurrencyRates
+* [API levels explained](#api-levels-explained-index)
+* [GetItem](#getitem-index)
+* [GetAllItems](#getallitems-index)
+* [GetCurrencyRates](#getcurrencyrates-index)
 
 ---
 
-##### API levels explained
+#### API levels explained [^](#index)
 
 * Basic (1)
     * Free
@@ -39,7 +39,7 @@ Some content and documentation might change later on.
 
 ---
 
-##### GetItem
+#### GetItem [^](#index)
 
 API level required: **1** or greater.
 
@@ -122,7 +122,7 @@ The `id` parameter specifies the **Buff** item id.
 
 ---
 
-##### GetAllItems
+#### GetAllItems [^](#index)
 
 API level required: **20** or greater.
 
@@ -241,7 +241,7 @@ Note: This is a partial response!
 
 ---
 
-##### GetCurrencyRates
+#### GetCurrencyRates [^](#index)
 
 API level required: **20** or greater. <br>
 Returns the current currency rates. <br>
