@@ -10,7 +10,7 @@ Some content and documentation might change later on.
 * [GetItem](#getitem-)
 * [GetAllItems](#getallitems-)
 * [GetPriceHistory](#getpricehistory-)
-* [GetTrends](#getrends-)
+* [GetTrends](#gettrends-)
 * [GetCurrencyRates](#getcurrencyrates-)
 
 ---
