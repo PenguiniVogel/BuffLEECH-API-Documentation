@@ -9,6 +9,8 @@ Some content and documentation might change later on.
 * [API levels explained](#api-levels-explained-)
 * [GetItem](#getitem-)
 * [GetAllItems](#getallitems-)
+* [GetPriceHistory](#getpricehistory-)
+* [GetTrends](#getrends-)
 * [GetCurrencyRates](#getcurrencyrates-)
 
 ---
@@ -19,12 +21,16 @@ Some content and documentation might change later on.
     * Free
     * 120 requests (total) per 24 hours
     * GetAllItems ***not available***
+    * GetPriceHistory ***not available***
+    * GetTrends ***not available***
     * GetCurrencyRates ***not available***
 
 * Registered (2)
     * You registered your usage
     * 30 requests per hour
     * GetAllItems ***not available***
+    * GetPriceHistory ***not available***
+    * GetTrends ***not available***
     * GetCurrencyRates ***not available***
 
 * Verified (20)
@@ -45,6 +51,7 @@ API level required: **1** or greater.
 
 Optional parameters:
 * `currency`: Default `USD`, specify a ISO currency code and the returned price will be in the specified currency.
+* `format`: Default `json`, accepted values: `json`, `xml`
 
 **Get item by name** <br>
 `GetItem?name=AWP | Dragon Lore` <br>
@@ -118,6 +125,39 @@ The `id` parameter specifies the **Buff** item id.
     "count_steam_selling": 0,
     "count_steam_buying": 8752
 }
+```
+
+**XML example** <br>
+`GetItem?id=34074&format=xml` <br>
+```XML
+<response>
+    <name>AWP | Dragon Lore (Battle-Scarred)</name>
+    <itemId>34074</itemId>
+    <assetInfo>
+        <defIndex>9</defIndex>
+        <paintIndex>344</paintIndex>
+    </assetInfo>
+    <currency>
+        <symbol>$</symbol>
+        <name>USD</name>
+    </currency>
+    <price>
+        <buff>2477.45</buff>
+        <steam>0</steam>
+    </price>
+    <buyorder>
+        <buff>2368.29</buff>
+        <steam>2000</steam>
+    </buyorder>
+    <selling>
+        <buff>29</buff>
+        <steam>0</steam>
+    </selling>
+    <buying>
+        <buff>13</buff>
+        <steam>8752</steam>
+    </buying>
+</response>
 ```
 
 ---
@@ -238,6 +278,60 @@ Note: This is a partial response!
     ]
 }
 ```
+
+---
+
+#### GetPriceHistory [^](#index)
+
+API level required: **20** or greater. <br>
+Returns the price history for the specified item.
+
+Optional parameters:
+* `currency`: Default `USD`, specify a ISO currency code and the returned price will be in the specified currency.
+* `id`: The Buff Item ID, `search` is ignored if this parameter is provided.
+* `search`: Default empty, try finding the item by name.
+* `time`: Default `week`, accepted values are: `week`, `month`, `6_months`, `year`
+
+Note: This response is truncated for readability. <br>
+**Example with `id=857652`**
+```JSON
+{
+    "currency_symbol": "$",
+    "currency_name": "USD",
+    "name": "AK-47 | Slate (Factory New)",
+    "item_id": 857652,
+    "history": [
+        [1644224400000, 14.17],
+        [1644220800000, 12.31],
+        [1644217200000, 13.21],
+        [1644213600000, 12.59],
+        [1644210000000, 13.16],
+        [1644206400000, 13.05],
+        [1644202800000, 11.94],
+        [1644199200000, 13.17],
+        [1644195600000, 13.42],
+        [1644188400000, 11.87],
+        [1644174000000, 12.16],
+        [1644170400000, 12.20],
+        [1644166800000, 14.65],
+        [1644163200000, 12.89],
+        [1644159600000, 66.06],
+        [1644156000000, 12.50],
+        [1644152400000, 12.29],
+        [1644148800000, 13.01],
+        [1644145200000, 12.57],
+        "More after..."
+    ]
+}
+```
+
+---
+
+#### GetTrends [^](#index)
+
+API level required: **20** or greater. <br>
+Returns the current 10 most changed items by price. <br>
+Note: This endpoint is still being worked on.
 
 ---
 
